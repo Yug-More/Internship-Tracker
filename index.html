@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trker</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <div class="main-container">
+    <header>
+      <h1> Internship Tracker <span>💻</span></h1>
+      <button id="themeToggle" title="Toggle Theme">🌙</button>
+      <div class="stats">
+        <div class="card total">
+          <p>Total</p>
+          <h3 id="totalCount">0</h3>
+        </div>
+        <div class="card interview">
+          <p>Interviews</p>
+          <h3 id="interviewCount">0</h3>
+        </div>
+        <div class="card offer">
+          <p>Offers</p>
+          <h3 id="offerCount">0</h3>
+        </div>
+      </div>
+    </header>
+
+    <section class="form-section glass">
+      <input type="text" id="company" placeholder="🏢 Company Name" />
+      <input type="text" id="position" placeholder="💼 Position" />
+      <input type="text" id="location" placeholder="📍 Location" />
+      <input type="date" id="dateApplied" />
+      <select id="status">
+        <option value="Applied">Applied</option>
+        <option value="Interview Scheduled">Interview Scheduled</option>
+        <option value="Rejected">Rejected</option>
+        <option value="Offer Received">Offer Received</option>
+      </select>
+      <button id="addBtn">➕ Add</button>
+    </section>
+
+    <div class="search-container">
+      <input type="text" id="search" placeholder="🔍 Search applications..." />
+    </div>
+
+    <section class="table-section glass">
+      <table>
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Position</th>
+            <th>Location</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </section>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
